@@ -10,7 +10,12 @@ function increment(){
 
 function decrement(){
     count -= 1;
-    countStr.textContent = count;
+    if(count <= 0){
+        count = 0;
+        countStr.textContent = count;
+    }else{
+        countStr.textContent = count;
+    }
 }
 
 function reset(){
